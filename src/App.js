@@ -1,13 +1,10 @@
-import MyComponent from "./MyComponents";
+import EventPracticefnc from "./EventPracticefnc";
 
 const App = () => {
-  const ob = {
-    name: "asd",
-  };
   return (
-    <MyComponent name={"React"} favoritenumber={1} obj={ob}>
-      children
-    </MyComponent>
+    <div>
+      <EventPracticefnc></EventPracticefnc>
+    </div>
   );
 };
 
