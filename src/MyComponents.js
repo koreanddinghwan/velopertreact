@@ -1,11 +1,26 @@
 import React from "react";
+import propTypes from "prop-types";
+import { Component } from "react";
 
-const MyComponent = ({ name, children }) => {
-  return (
-    <div>
-      나의 새로운 {name}컴포넌트
-      <div>{children}이건 children props입니다.</div>
-    </div>
-  );
-};
+class MyComponent extends Component {
+  static defaultProps = {
+    name: "기본이름",
+  };
+  static propTypes = {
+    name: propTypes.string,
+    favoritenumber: propTypes.number.isRequired,
+  };
+
+  render() {
+    const { name, favoritenumber, children } = this.props;
+    return (
+      <div>
+        hello, my name is {name}
+        children value is {children}
+        my favnumber is {favoritenumber}
+      </div>
+    );
+  }
+}
+
 export default MyComponent;
